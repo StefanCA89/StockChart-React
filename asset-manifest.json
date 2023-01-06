@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/StockChart-React/static/css/main.6675a226.css",
+    "main.js": "/StockChart-React/static/js/main.81e76e40.js",
+    "static/media/alphavantage.png": "/StockChart-React/static/media/alphavantage.cdac07a11807be277ec1.png",
+    "index.html": "/StockChart-React/index.html",
+    "main.6675a226.css.map": "/StockChart-React/static/css/main.6675a226.css.map",
+    "main.81e76e40.js.map": "/StockChart-React/static/js/main.81e76e40.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6675a226.css",
+    "static/js/main.81e76e40.js"
+  ]
+}
