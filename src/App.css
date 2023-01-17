@@ -127,11 +127,16 @@ label {
   text-align: center;
 }
 
+.toggle-box {
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+
 .toggle-switch-dark{
   width: 30px;
   height: 15px;
   border-radius: 8px;
-  margin-left: -1px;
   background-color: black;
   position: relative;
 }
@@ -141,14 +146,13 @@ label {
   height: 15px;
   background-color: #e2e2e2;
   border-radius: 8px;
-  margin-left: 3px;
   position: relative;
 }
 
 .switch-inner-dark {
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
+  width: 11px;
+  height: 11px;
+  border-radius: 6px;
   background-color: whitesmoke;
   position: absolute;
   margin-top: 2px;
