@@ -1,3 +1,5 @@
+import Toggle from './Toggle.js'
+
 export default function InputBar(props) {
     function updateInput(event) {
         const {name, value, id} = event.target
@@ -45,6 +47,7 @@ export default function InputBar(props) {
                 />
                 <label htmlFor="1min">1min</label>
             </fieldset>
+            <Toggle handleToggle={props.handleToggle}/>
         </div>
     )
 }

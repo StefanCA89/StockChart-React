@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import React, { useState, useRef, createContext } from 'react';
 import './App.css';
 import InputBar from './Components/InputBar'
 import Graph from './Components/Graph'
@@ -7,11 +7,20 @@ import TimestampBar from './Components/TimestampBar'
 import HoverInfoBar from './Components/HoverInfoBar'
 import Logo from './alphavantage.png'
 
+export const ThemeContext = React.createContext()
+
 function App() {
   const [requestData, setRequestData] = useState({
     symbol: '',
     timeInterval: ''
   })
+
+  
+  const [darkTheme, setDarkTheme] = useState(false)
+
+  function toggleTheme() {
+    setDarkTheme(prevTheme => !prevTheme)
+  }
 
   const [stockData, setStockData] = useState()
   const canvasRef = useRef(null)
@@ -44,13 +53,15 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <InputBar setData={setRequestData} handleSubmit={fetchData}/>
-      {stockData && <PriceSideBar data={stockData}/>}
-      {stockData ? <Graph data={stockData} refToCanvas={canvasRef} /> : <img src={Logo} className="logo"/>}
-      {stockData && <HoverInfoBar data={stockData} refToCanvas={canvasRef}/>}
-      {stockData && <TimestampBar timeStamp={stockData.timeStamp}/>}
-    </div>
+    <ThemeContext.Provider value={darkTheme}>
+      <div className="App" style={{backgroundColor: darkTheme ? "#000000a3" : "whitesmoke", color: darkTheme ? "white" :  "black"}}>
+        <InputBar setData={setRequestData} handleSubmit={fetchData} handleToggle={toggleTheme}/>
+        {stockData && <PriceSideBar data={stockData}/>}
+        {stockData ? <Graph data={stockData} refToCanvas={canvasRef} /> : <img src={Logo} className="logo"/>}
+        {stockData && <HoverInfoBar data={stockData} refToCanvas={canvasRef}/>}
+        {stockData && <TimestampBar timeStamp={stockData.timeStamp}/>}
+      </div>
+    </ThemeContext.Provider>
   );
 }
 

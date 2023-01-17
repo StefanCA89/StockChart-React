@@ -1,7 +1,9 @@
-import { useEffect} from "react"
+import { useEffect, useContext} from "react"
+import ThemeContext from '../App'
 
 export default function Graph(props) {
   const {priceOpen, priceClose, priceHigh, priceLow} = props.data
+  const darkTheme = useContext(ThemeContext)
 
   useEffect(() => {
     const canvas = props.refToCanvas.current
