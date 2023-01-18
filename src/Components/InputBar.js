@@ -10,7 +10,7 @@ export default function InputBar(props) {
     return (
         <div className="input-bar">
             <input type='text' className="input-box" name="symbol" onChange={updateInput} placeholder="Type Symbol here"></input>
-            <button style={{fontFamily:'monospace'}} onClick={props.handleSubmit}>Submit</button>
+            <button className='submit-btn' onClick={props.handleSubmit}>Submit</button>
             <fieldset className="radio-field">
                 <input type='radio'
                     id="60min"

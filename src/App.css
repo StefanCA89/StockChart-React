@@ -26,6 +26,11 @@
   font-family: monospace;
 }
 
+.submit-btn {
+  font-family: monospace;
+  cursor: pointer;
+}
+
 input[type = radio] {
   cursor: pointer;
 }
@@ -102,13 +107,15 @@ label {
 
 .hoverPrice-Title{
   background-color: #61c34ab0;
-  border-radius: 5px;
+  border-radius: 5px 5px 0px 0px;
   text-align: center;
 }
 
 .hoverPrice-Price{
   text-align: center;
   font-size: large;
+  margin-top: -1px;
+  border-radius: 0px 0px 5px 5px;
 }
 
 .hoverInfoBar-Time {
@@ -119,12 +126,14 @@ label {
 
 .hoverTime-Title{
   background-color:#61c34ab0;
-  border-radius: 5px;
+  border-radius:  5px 5px 0px 0px;
   text-align: center;
 }
 
 .hoverTime-Time{
   text-align: center;
+  margin-top: -1px;
+  border-radius: 0px 0px 5px 5px;
 }
 
 .toggle-box {

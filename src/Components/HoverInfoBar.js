@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
+import { ThemeContext } from "../App"
 
 export default function HoverInfoBar(props) {
     const high = Math.max(...props.data.priceHigh)
     const low = Math.min(...props.data.priceLow)
     const diff = high - low
 
+    const darkTheme = useContext(ThemeContext)
     const [price, setPrice] = useState()
     const [timestamp, setTimestamp] = useState()
     const [visibility, setVisibility] = useState("hidden")
@@ -31,11 +33,15 @@ export default function HoverInfoBar(props) {
         <div className="hoverInfo-Bar" style={{visibility : visibility}} >
             <div className="hoverInfoBar-Price">
                 <div className="hoverPrice-Title">Price</div>
-                <div className="hoverPrice-Price">{price}</div>
+                <div className="hoverPrice-Price"
+                style={{backgroundColor: darkTheme ? "#000000a3" : "whitesmoke"}}
+                >{price}</div>
             </div>
             <div className="hoverInfoBar-Time">
                 <div className="hoverTime-Title">Timestamp</div>
-                <div className="hoverTime-Time">{timestamp}</div>
+                <div className="hoverTime-Time"
+                style={{backgroundColor: darkTheme ? "#000000a3" : "whitesmoke"}}
+                >{timestamp}</div>
             </div>
         </div>
     )
