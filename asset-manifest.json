@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/StockChart-React/static/css/main.618a2e85.css",
-    "main.js": "/StockChart-React/static/js/main.ef6e4c73.js",
+    "main.css": "/StockChart-React/static/css/main.b66463c6.css",
+    "main.js": "/StockChart-React/static/js/main.0137e04c.js",
     "static/media/alphavantage.png": "/StockChart-React/static/media/alphavantage.cdac07a11807be277ec1.png",
     "index.html": "/StockChart-React/index.html",
-    "main.618a2e85.css.map": "/StockChart-React/static/css/main.618a2e85.css.map",
-    "main.ef6e4c73.js.map": "/StockChart-React/static/js/main.ef6e4c73.js.map"
+    "main.b66463c6.css.map": "/StockChart-React/static/css/main.b66463c6.css.map",
+    "main.0137e04c.js.map": "/StockChart-React/static/js/main.0137e04c.js.map"
   },
   "entrypoints": [
-    "static/css/main.618a2e85.css",
-    "static/js/main.ef6e4c73.js"
+    "static/css/main.b66463c6.css",
+    "static/js/main.0137e04c.js"
   ]
 }
