@@ -58,6 +58,34 @@ label {
   border-width: 1.5px;
 }
 
+.error-box-backdrop {
+  position: absolute;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  width: 625px;
+  height: 425px;
+  border-radius: 5px;
+}
+
+.error-box-foreground {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 250px;
+  height: 100px;
+  background-color: #c4e4c0d6;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.error-box-button {
+  align-self: center;
+  cursor: pointer;
+}
+
 .price-sideBar {
   display: flex;
   flex-direction: column;
